@@ -6,18 +6,20 @@
     =================================*/
 
 :root {
-    --col-1: 8.333333%;
-    --col-2:calc(var(--col-1)*2);
-    --col-3:25%;
-    --col-4:calc(var(--col-1)*4);
-    --col-5:calc(var(--col-1)*5);
-    --col-6: 50%;
-    --col-7:calc(var(--col-1)*7);
-    --col-8:calc(var(--col-1)*8);
-    --col-9:calc(var(--col-1)*9);
-    --col-10:calc(var(--col-1)*10);
-    --col-11:calc(var(--col-1)*11);
-    --col-12:100%;
+    --col:8.33333%;
+    --marginCard: 2rem; /* 1 rem de cada lado */
+    --col-1: calc(var(--col)-var(--marginCard));
+    --col-2: calc(var(--col)*2-var(--marginCard));
+    --col-3: calc(25%-var(--marginCard));
+    --col-4: calc(var(--col)*4 - var(--marginCard));
+    --col-5: calc(var(--col)*5 - var(--marginCard));
+    --col-6: calc(50% - var(--marginCard));
+    --col-7: calc(var(--col)*7 - var(--marginCard));
+    --col-8: calc(var(--col)*8 - var(--marginCard));
+    --col-9: calc(var(--col)*9 - var(--marginCard));
+    --col-10: calc(var(--col)*10 - var(--marginCard));
+    --col-11: calc(var(--col)*11 - var(--marginCard));
+    --col-12: calc(100% - var(--marginCard));
 }
 
 body {
@@ -109,7 +111,6 @@ body {
     height: 50px;
     box-sizing: border-box;
     box-shadow: inset 1px 1px 5px #00000056;
-    margin-top: 1rem;
 }
 
 .calculadora__btn:hover {
@@ -137,6 +138,7 @@ body {
     border-radius: 16px;
     padding: 1rem;
     box-sizing: border-box;
+    margin: 1rem;
 }
 
 .perricos__card--img {
