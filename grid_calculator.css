@@ -7,7 +7,7 @@
 
 :root {
     --col:8.33333%;
-    --marginCard: 2rem; /* 1 rem de cada lado */
+    --marginCard:  0.2rem; /* 1 rem de cada lado */
     --col-1: calc(var(--col) - var(--marginCard));
     --col-2: calc(var(--col)*2 - var(--marginCard));
     --col-3: calc(25% - var(--marginCard));
@@ -79,36 +79,54 @@ body {
     .col-lg-1 { width: var(--col-1); }
 }
 
+
 /*  =================================
-    CLASES PERRICOS
+    CLASES CALCULADORA
     =================================*/
 
-.perricos__card {
-    background-color: #ededed;
+.calculadora{
+    width: 60%;
+    max-width: 600px;
+    background-color: rgb(243, 218, 231);
     border-radius: 16px;
     padding: 1rem;
+}
+
+.calculadora__display {
+    background-color: rgb(212, 147, 181);
+    height: 50px;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    
+    padding: 0 1rem;
+    box-shadow: inset 1px 1px 5px #000000;
     box-sizing: border-box;
-    margin: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.perricos__card--img {
-    width: 100%;
-    background-color: #000000;
+.calculadora__btn {
+    background-color: rgba(214, 177, 196, 0.329);
     border-radius: 8px;
-    height: 200px;
+    height: 50px;
+    box-sizing: border-box;
+    box-shadow: inset 1px 1px 5px #00000056;
+    margin: 0.1rem;
 }
 
-.perricos__card--name {
-    margin-top: 3rem ;
+.calculadora__btn:hover {
+    cursor: pointer;
 }
 
-.perricos__card--breed {
-    border: 1px solid #0000008f;
-    padding: 0.25rem 1rem;
-    border-radius: 4px;
-    margin: 1rem 0;
+.calculadora__btn--delete {
+    background-color: rgb(231, 174, 94);
 }
 
-.perricos__card--description {
-    margin: 2rem 0;
+.calculadora__btn--operation {
+    background-color: rgb(214, 177, 196);
+}
+
+.calculadora__btn--equal {
+    background-color: rgb(122, 184, 101);
 }
